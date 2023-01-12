@@ -19,10 +19,12 @@ const { BOT_TOKEN } = process.env;
 // Create Discord Bot Client Instance and set its permissions with GatewayIntentBits.
 const client = new Client({ intents: GatewayIntentBits.Guilds });
 
-// Initialize variables for storing commands. We can easily retrieve information about the commands with this data type.
-// We need this for registering our commands to the server so that we may use it in our discord bot
-//
-// NOTE that both data types serve different purposes. One is for retrieval of data and the other is for registering the commands to the Discord API.
+/*
+ * Initialize variables for storing commands. We can easily retrieve information about the commands with this data type.
+ * We need this for registering our commands to the server so that we may use it in our discord bot
+ *
+ * NOTE that both data types serve different purposes. One is for retrieval of data and the other is for registering the commands to the Discord API.
+ */
 client.commands = new Collection();
 client.commandArray = [];
 
@@ -40,10 +42,12 @@ client.commandArray = [];
 const functionFolders = fs.readdirSync("./src/functions");
 // Loop through each folder in src/functions
 for (const folder of functionFolders) {
-  /* Get all the files in src/functions/folder and make sure it is a javascript file using the filter method.
+  /*
+   * Get all the files in src/functions/folder and make sure it is a javascript file using the filter method.
    *
    * The filter method iterates through the entire array or object. It returns an Array.
    * The filter method requires a call back method that returns a boolean.
+   * For each item in the array or object, the callback method is applied.
    * If the call back method returns a true then that item in the array get's appended into the return Array.
    * In the method below file.endsWith(`.js`) returns a boolean literal true if the file name ends with .js
    */

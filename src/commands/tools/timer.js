@@ -6,8 +6,15 @@ const timers = require("../../models/timer");
 const startTimer = require("../../utility/startTimer");
 
 module.exports = {
-  // Create new Slash command using the SlashCommand Builder.
-  // Store it in data because that gets processed by our handlers
+  /*
+   * Create new Slash command using the SlashCommand Builder.
+   * Store it in data because that gets processed by our handlersa
+   *
+   * Builder is a type of Object Oriented Programming Pattern to minimize ambiguity in constructor arguments.
+   * Instead of passing in arguments to parameters we instead call methods that inserts values into a specific parameter.
+   * Each of builder method invoked returns the object itself.
+   * By returning the object itself, we can apply more builder methods to futher set its parameters.
+   */
   data: new SlashCommandBuilder()
     .setName("timer")
     .setDescription("Create a timer")
@@ -40,7 +47,7 @@ module.exports = {
     const focusedOption = interaction.options.getFocused(true);
 
     /*
-     * Defined the options for each autocomplete here
+     * Define the options for each autocomplete here
      */
     let choices = [];
     if (focusedOption.name === "time_units") {
