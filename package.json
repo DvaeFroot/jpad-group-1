@@ -1,0 +1,25 @@
+{
+  "name": "jpad-project-event-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "chalk": "^4.1.2",
+    "discord-api-types": "^0.37.26",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.8.3",
+    "ms-prettify": "^1.4.0",
+    "short-unique-id": "^4.4.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
+  }
+}
