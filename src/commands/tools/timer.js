@@ -12,7 +12,7 @@ module.exports = {
    *
    * Builder is a type of Object Oriented Programming Pattern to minimize ambiguity in constructor arguments.
    * Instead of passing in arguments to parameters we instead call methods that inserts values into a specific parameter.
-   * Each of builder method invoked returns the object itself.
+   * Each builder method invoked returns the object itself.
    * By returning the object itself, we can apply more builder methods to futher set its parameters.
    */
   data: new SlashCommandBuilder()

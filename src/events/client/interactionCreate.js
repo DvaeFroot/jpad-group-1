@@ -6,6 +6,10 @@ const { InteractionType } = require("discord.js");
 
 module.exports = {
   name: "interactionCreate",
+  /*
+   * interaction is the object that was used to invoke the command
+   * We can perform many things with the interaction object such as replying to it and editing its contents
+   */
   async execute(interaction, client) {
     // Define the different types of interactions
     // Perform Slash Commands
@@ -37,7 +41,7 @@ module.exports = {
       }
       // Perform autocompletion
     } else if (
-      interaction.type == InteractionType.ApplicationCommandAutocomplete
+      interaction.type === InteractionType.ApplicationCommandAutocomplete
     ) {
       // Get the name of the Slash command that was invoked
       const { commandName } = interaction;
